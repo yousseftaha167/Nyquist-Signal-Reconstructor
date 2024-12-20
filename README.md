@@ -92,14 +92,9 @@ An educational desktop application demonstrating signal sampling and recovery te
   ![Screenshot 2](https://github.com/user-attachments/assets/5e10d14a-a1cd-42ca-933f-b22684bef504)
 
 
-
+---
 ### Video Demo
-<video src="Uploading Signal Reconstructor Video.mp4…" controls="controls" style="max-width: 100%;"></video>
-
-
-
-Uploading Signal Reconstructor Video.mp4…
-
+<video src="https://github.com/user-attachments/assets/b83ee1ba-57ab-4690-bb54-5d0bb85fbbf5" controls="controls" style="max-width: 100%;"></video>
 
 ---
 
