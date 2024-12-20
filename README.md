@@ -86,13 +86,16 @@ An educational desktop application demonstrating signal sampling and recovery te
 
 ### Screenshots
 - **Original and Reconstructed Signal**  
-  ![Screenshot 1](https://github.com/user-attachments/assets/71eb3f63-2feb-4c4d-9483-1e69808050fb)
+  ![Screenshot 1](https://github.com/user-attachments/assets/405f6756-7cfe-4b54-abe8-7c4276e5f837)
+
 - **Frequency Domain Analysis**  
-  ![Screenshot 2](https://github.com/user-attachments/assets/d7b5b552-4623-4704-bca5-23705a11b722)
+  ![Screenshot 2](https://github.com/user-attachments/assets/5e10d14a-a1cd-42ca-933f-b22684bef504)
+
 
 
 ### Video Demo
-<video src="" controls="controls" style="max-width: 100%;"></video>
+<video src="Uploading Signal Reconstructor Video.mp4…" controls="controls" style="max-width: 100%;"></video>
+
 
 
 Uploading Signal Reconstructor Video.mp4…
