@@ -20,8 +20,8 @@ An educational desktop application demonstrating signal sampling and recovery te
 
 ### 3. **Customizable Sampling Frequency**
    - Adjust the sampling frequency using a slider.
-   - Toggle between absolute frequency (Hz) and normalized frequency (% of \(f_{max}\)).
-   - Quickly set valid sampling frequencies (\(f_s \geq 2f_{max}\)) with a dedicated button.
+   - Toggle between absolute frequency $(Hz)$ and normalized frequency $(% of \(f_{max}\))$.
+   - Quickly set valid sampling frequencies $(\(f_s \geq 2f_{max}\))$ with a dedicated button.
 
 ### 4. **Interpolation Methods**
    - Explore reconstruction techniques:
@@ -50,7 +50,7 @@ An educational desktop application demonstrating signal sampling and recovery te
 
 2. **Set Sampling Parameters:**
    - Adjust the sampling frequency using the slider or set a valid sampling frequency with the quick toggle button.
-   - Toggle between Hz and normalized \(f_{max}\) display.
+   - Toggle between Hz and normalized $\(f_{max}\)$ display.
 
 3. **Add Noise (Optional):**
    - Use the SNR slider to introduce noise and observe its effects.
