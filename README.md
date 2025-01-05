@@ -1,109 +1,148 @@
-# **Beamforming Simulator**
+# Signal Reconstruction Application
 
-Beamforming is a pivotal technology in modern systems like wireless communications, radar, ultrasound, and biomedical applications. This project presents a **2D Beamforming Simulator** that allows users to explore, customize, and visualize beamforming scenarios in real time. The simulator provides intuitive controls, flexible customization, and clear visualizations for various applications.
-
----
-
-## **Video Demo**
-
-[Insert link to video demo showcasing the application, features, and scenarios]
+An educational desktop application demonstrating signal sampling and recovery techniques. The app is designed to illustrate the importance of the Nyquist rate and validate the concepts of signal reconstruction using various interpolation methods. Ideal for learners and educators interested in digital signal processing.
 
 ---
 
-## **Overview**
+## Features
 
-Below is a screenshot showcasing the overall design and interface of the simulator:
+### 1. **Signal Sampling & Reconstruction**
+   - **Original Signal Display:** Visualize the original signal with sampling points marked.
+   - **Reconstructed Signal:** View the reconstructed signal using selectable interpolation methods.
+   - **Difference Graph:** Toggle between the difference plot and side-by-side comparison of original and reconstructed signals.
+   - **Frequency Domain Analysis:** Inspect the frequency domain to detect aliasing.
 
-![App Design Overview](https://github.com/user-attachments/assets/7ed47a00-2fa8-46cd-a634-4b6f1c3925ce)
+### 2. **Signal Mixer/Composer**
+   - Generate new signals by:
+     - Selecting the number of terms (sinusoidal components).
+     - Defining frequency, amplitude, and phase for each component.
+   - Remove individual components to modify the signal dynamically.
 
----
+### 3. **Customizable Sampling Frequency**
+   - Adjust the sampling frequency using a slider.
+   - Toggle between absolute frequency $(Hz)$ and normalized frequency $(% of \(f_{max}\))$.
+   - Quickly set valid sampling frequencies $(\(f_s \geq 2f_{max}\))$ with a dedicated button.
 
-## **Features**
+### 4. **Interpolation Methods**
+   - Explore reconstruction techniques:
+     - Shannon Interpolation
+     - Lanczos Interpolation
+     - Step Interpolation
+   - Compare performance, pros, and cons of each method.
 
-### **Core Functionality**
-- **Beam Steering**: Customize steering angles in real time with visual feedback.  
-- **Phased Array Geometry**: Choose between linear and curved arrays, with adjustable curvature parameters.  
-- **Constructive/Destructive Interference Mapping**: Visualize the beam profile and interference map in synchronized views.  
-- **Multiple Array Units**: Add multiple phased array units, each with adjustable parameters and locations.  
+### 5. **Noise Control**
+   - Add noise to the signal using an SNR slider.
+   - Observe the impact of noise on the reconstructed signal and frequency domain.
 
----
+### 6. **Real-time Updates**
+   - Instantaneous updates to all plots when parameters are changed.
 
-## **Scenarios**
-
-The simulator supports three distinct scenarios, each designed to address specific applications of beamforming:
-
-### **1. 5G Communications**
-- **Objective**: Simulate a beamforming scenario where the system focuses on signals originating from a desired steering angle.  
-- **Explanation**: In 5G communications, it’s common to target a specific user or signal source while allowing other signals to exist in different angles. The simulator demonstrates how beamforming can isolate the desired signal while maintaining the presence of others. This scenario highlights constructive interference in the target angle and the corresponding destructive patterns elsewhere.  
-- **Key Parameters**:
-  - Multiple operating frequencies.
-  - Adjustable steering angles for signal focus.
-  - Visualization of interference patterns.
-- **Screenshot**:  
-  ![5G Scenario](https://github.com/user-attachments/assets/a2815d1b-5e8a-4c9e-a761-32c3c8f5c06e)
-
----
-
-### **2. Ultrasound Imaging**
-- **Objective**: Model a beamforming scenario where the system produces wide signals covering a specific range in the desired direction.  
-- **Explanation**: Ultrasound imaging requires beams that span a range to provide a complete image. In this scenario, the simulator generates wide beams that ensure the entire target area is covered. It also ensures the frequency is optimized for patient safety, avoiding side effects from excessive energy levels.  
-- **Key Parameters**:
-  - Adjustable beam width to cover a larger range.
-  - Frequencies fine-tuned for safe medical use.
-  - Synchronized visualization of beam profile and interference map.
-- **Screenshot**:  
-  ![Ultrasound Scenario](https://github.com/user-attachments/assets/2b36186f-24cc-48aa-b9de-fcfd35ba97e2)
+### 7. **Resizable UI**
+   - Responsive and flexible user interface that adapts seamlessly to resizing.
 
 ---
 
-### **3. Tumor Ablation**
-- **Objective**: Simulate a narrow, focused beam targeting a specific cell or area.  
-- **Explanation**: Tumor ablation involves using highly targeted beams to destroy cancerous cells without affecting surrounding healthy tissue. The simulator generates a narrow beam with high precision in the desired steering angle. Like the ultrasound scenario, the operating frequency is chosen carefully to ensure no harmful side effects occur.  
-- **Key Parameters**:
-  - Narrow beam width for precise targeting.
-  - High accuracy to prevent interaction with adjacent cells.
-  - Adjustable array curvature for optimal focus.
-- **Screenshot**:  
-  ![Tumor Ablation Scenario](https://github.com/user-attachments/assets/f3d72381-126e-4902-8aad-f0908179693e)
+## Usage Instructions
+
+1. **Load or Compose a Signal:**
+   - Use the "Composer" to create a new signal by specifying sinusoidal terms, frequencies, amplitudes, and phases.
+   - Alternatively, load a signal from a file.
+
+2. **Set Sampling Parameters:**
+   - Adjust the sampling frequency using the slider or set a valid sampling frequency with the quick toggle button.
+   - Toggle between Hz and normalized $\(f_{max}\)$ display.
+
+3. **Add Noise (Optional):**
+   - Use the SNR slider to introduce noise and observe its effects.
+
+4. **Reconstruct Signal:**
+   - Choose an interpolation method from the dropdown menu.
+   - Compare the reconstructed signal with the original using the difference graph.
+
+5. **Analyze Results:**
+   - Inspect the frequency domain for aliasing.
+   - View differences between the original and reconstructed signals.
 
 ---
 
-## **How to Run the Project**
+## Testing Scenarios
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YassienTawfikk/2D-Beamforming-Simulator.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd 2D-Beamforming-Simulator
-   ```
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the application:
-   ```bash
-   python Main.py
-   ```
+### 1. **2Hz + 6Hz Sinusoids**
+   - Expected Behavior:
+     - **12Hz Sampling:** Perfect reconstruction.
+     - **4Hz Sampling:** Aliasing occurs, showing a single frequency.
+     - **8Hz Sampling:** Partial reconstruction with visible artifacts.
+
+### 2. **High-frequency Signal with Noise**
+   - Mix of high-frequency components.
+   - Add varying levels of noise to demonstrate reconstruction performance under noisy conditions.
+
+### 3. **Multiple Frequencies with Small Gaps**
+   - Demonstrates the limitations of reconstruction when frequencies are close to the Nyquist limit.
 
 ---
 
-## **Team**
+## Visuals
+
+### Screenshots
+- **Original and Reconstructed Signal**  
+  ![Screenshot 1](https://github.com/user-attachments/assets/405f6756-7cfe-4b54-abe8-7c4276e5f837)
+
+- **Frequency Domain Analysis**  
+  ![Screenshot 2](https://github.com/user-attachments/assets/5e10d14a-a1cd-42ca-933f-b22684bef504)
+
+
+---
+### Video Demo
+<video src="https://github.com/user-attachments/assets/b83ee1ba-57ab-4690-bb54-5d0bb85fbbf5" controls="controls" style="max-width: 100%;"></video>
+
+---
+
+## Team
 
 This project wouldn’t have been possible without the hard work and collaboration of my amazing team. Huge shout-out to:
 
-- [Nancy Mahmoud](https://github.com/nancymahmoud1)  
-- [Madonna Mosaad](https://github.com/madonna-mosaad)  
+- [Nancy Mahmoud](https://github.com/nancymahmoud1)
+- [Madonna Mosaad](https://github.com/madonna-mosaad)
 - [Yassien Tawfik](https://github.com/YassienTawfikk)
+
+
+Your support, ideas, and teamwork made this project a success. 🎉
 
 ---
 
-## **Contact**
+## Educational Value
+This application is tailored for educational purposes, providing a hands-on experience in understanding:
+   - The Nyquist–Shannon sampling theorem.
+   - Signal reconstruction techniques and their limitations.
+   - The effects of noise and aliasing on signal processing.
+
+---
+
+## System Requirements
+- **OS:** Windows/Linux/MacOS
+- **Python Dependencies:** `numpy`, `matplotlib`, `scipy`, `PyQt5` (or any GUI library used).
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/signal-reconstruction-app.git
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the application:
+   ```bash
+   python main.py
+   ```
+---
+## Contact
 
 For any questions or suggestions, feel free to reach out:
 
-- **Name**: Yassien Tawfik  
-- **Email**: [Yassien.m.m.tawfik@gmail.com](mailto:Yassien.m.m.tawfik@gmail.com)
-
----
+- **Name**: Yassien Tawfik
+- **Email**: Yassien.m.m.tawfik@gmail.com
