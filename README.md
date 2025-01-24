@@ -3,6 +3,10 @@
 An educational desktop application demonstrating signal sampling and recovery techniques. The app is designed to illustrate the importance of the Nyquist rate and validate the concepts of signal reconstruction using various interpolation methods. Ideal for learners and educators interested in digital signal processing.
 
 ---
+### Video Demo
+<video src="https://github.com/user-attachments/assets/b83ee1ba-57ab-4690-bb54-5d0bb85fbbf5" controls="controls" style="max-width: 100%;"></video>
+
+---
 
 ## Features
 
@@ -91,26 +95,7 @@ An educational desktop application demonstrating signal sampling and recovery te
 - **Frequency Domain Analysis**  
   ![Screenshot 2](https://github.com/user-attachments/assets/5e10d14a-a1cd-42ca-933f-b22684bef504)
 
-
 ---
-### Video Demo
-<video src="https://github.com/user-attachments/assets/b83ee1ba-57ab-4690-bb54-5d0bb85fbbf5" controls="controls" style="max-width: 100%;"></video>
-
----
-
-## Team
-
-This project wouldn’t have been possible without the hard work and collaboration of my amazing team. Huge shout-out to:
-
-- [Nancy Mahmoud](https://github.com/nancymahmoud1)
-- [Madonna Mosaad](https://github.com/madonna-mosaad)
-- [Yassien Tawfik](https://github.com/YassienTawfikk)
-
-
-Your support, ideas, and teamwork made this project a success. 🎉
-
----
-
 ## Educational Value
 This application is tailored for educational purposes, providing a hands-on experience in understanding:
    - The Nyquist–Shannon sampling theorem.
@@ -118,13 +103,6 @@ This application is tailored for educational purposes, providing a hands-on expe
    - The effects of noise and aliasing on signal processing.
 
 ---
-
-## System Requirements
-- **OS:** Windows/Linux/MacOS
-- **Python Dependencies:** `numpy`, `matplotlib`, `scipy`, `PyQt5` (or any GUI library used).
-
----
-
 ## Installation
 
 1. Clone the repository:
@@ -140,9 +118,37 @@ This application is tailored for educational purposes, providing a hands-on expe
    python main.py
    ```
 ---
-## Contact
-
-For any questions or suggestions, feel free to reach out:
-
-- **Name**: Yassien Tawfik
-- **Email**: Yassien.m.m.tawfik@gmail.com
+## Contributors
+<table align="center">
+  <tr>
+        <td align="center">
+      <a href="https://github.com/YassienTawfikk" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/126521373?v=4" width="150px;" alt="Yassien Tawfik"/>
+        <br />
+        <sub><b>Yassien Tawfik</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/madonna-mosaad" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/127048836?v=4" width="150px;" alt="Madonna Mosaad"/>
+        <br />
+        <sub><b>Madonna Mosaad</b></sub>
+      </a>
+    </td>
+        <td align="center">
+      <a href="https://github.com/nancymahmoud1" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/125357872?v=4" width="150px;" alt="Nancy Mahmoud"/>
+        <br />
+        <sub><b>Nancy Mahmoud</b></sub>
+      </a>
+    </td>
+    </td>
+        <td align="center">
+      <a href="https://github.com/yousseftaha167" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/128304243?v=4" width="150px;" alt="Youssef Taha"/>
+        <br />
+        <sub><b>Youssef Taha</b></sub>
+      </a>
+    </td>    
+  </tr>
+</table>
